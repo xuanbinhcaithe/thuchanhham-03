@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài thực hành 03</title>
+</head>
+<body>
+    <script>
+        let indexMin=0;
+        function check(array) {
+            if (array.length==0 ){
+                return -1;
+            }
+            let min=array[0];
+            for (let i=1;i<array.length;i++) {
+                if (array[i]<min) {
+                    min=array[i];
+                    indexMin=i;
+                }
+            }
+            return indexMin;
+
+        }
+
+
+        let mang1=[1,5,6,-1,6];
+        indexMin =check(mang1);
+        if (indexMin==-1) {
+            alert("mảng đã cho rỗng");
+        } else {
+            alert('mảng đã cho có giá tri nho nhât la :'+ mang1[indexMin])
+        }
+
+    </script>
+</body>
+</html>
